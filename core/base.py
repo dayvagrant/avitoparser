@@ -1,6 +1,6 @@
 from splinter import Browser
 
-ff_driver = "geckodriver"
+ff_driver = "./geckodriver"
 
 import requests
 from bs4 import BeautifulSoup
