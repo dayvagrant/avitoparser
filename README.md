@@ -1,13 +1,46 @@
-# avitoparser
+# AvitoParser
 AvitoParser target direction is Car, but you can use sometime targets
 
-Requriments:
-    # sudo apt-get install firefox-geckodriver
-    # sudo apt-get install poetry
+### requriments for system:
+    ```sh
+    sudo apt-get install firefox-geckodriver 
+    ```
+    ```sh
+    sudo apt-get install poetry
+    ```
 
-example for url
+### Instruction
+
+- install all requirements
+    ```sh
+    poetry install
+    ```
+- enterence to env
+    ```sh
+    poetry shell
+    ```
+    or
+    ```sh
+    poetry run python you_script.py
+    ```
+
+- copy past url from you browser
+- example url
+    ```sh
     url = 'https://www.avito.ru/moskva_i_mo/avtomobili/audi/a4-ASgBAgICAkTgtg2emSjitg2MtSg'
+    ```
+- For example сode for serach
+    ```sh    
+    from core.avito import AvitoParser
+    from core.export_to import save_to_file
+    
+    avito = AvitoParser(url)
+    avito_sale_items = get_sales_items(with_recomendations = True)
+    save_to_file(data = avito_sale_items, filename='avita_sale_items')
+    ```
 
+## License
 
-Instruction:
-    Copy past url from you browser, example for wonna you serach
+MIT
+
+**Free Software, Hell Yeah!**
